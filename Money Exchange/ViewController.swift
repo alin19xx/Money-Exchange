@@ -33,6 +33,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var imagBack: UIImageView!
     @IBOutlet weak var labelCoinValue: UILabel!
     var arrayCoins:[Coin] = []
+    var pos1 = ""
+    var pos2 = ""
+    var value1 = 0
+    var value2 = 0
     
     //Metodo para establecer el numero de columnas
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -47,8 +51,30 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return arrayCoins[row].getKeyCoin()
     }
     //Metodo para mostrar las keys de cada moneda
-    private func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        return textInfo.text = ""
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        pos1 = arrayCoins[pickerView.selectedRow(inComponent: 0)].getKeyCoin()
+        pos2 = arrayCoins[pickerView.selectedRow(inComponent: 1)].getKeyCoin()
+        if(component == 0){
+            value1 = row
+        }else if(component == 1){
+            value2 = row
+        }
+        
+    }
+    
+    @IBAction func convert(_ sender: Any) {
+        print(pos1)
+        print(pos2)
+        print(value1)
+        print(value2)
+        
+        let valor:Double = Double(inputAmount.text ?? "0") ?? 0
+
+        let a = arrayCoins[value1].getValueCoin()
+        let b = arrayCoins[value2].getValueCoin()
+        let conversion:Double = (valor * b) / a
+
+        textInfo.text = String(conversion)
     }
     
     /* CODIGO PARA GUARDAR LA INFO DEL PICKERVIEW EN LABEL
