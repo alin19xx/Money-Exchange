@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D6EA248218DF9B4000FE02E /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6EA247218DF9B4000FE02E /* Coin.swift */; };
 		2D6EA24C218E0D01000FE02E /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6EA24B218E0D01000FE02E /* RoundButton.swift */; };
+		331DC178219604470002CBB3 /* ViewHackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331DC177219604470002CBB3 /* ViewHackController.swift */; };
 		332D8EB7218A27D600811E89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332D8EB6218A27D600811E89 /* AppDelegate.swift */; };
 		332D8EB9218A27D600811E89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332D8EB8218A27D600811E89 /* ViewController.swift */; };
 		332D8EBC218A27D600811E89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332D8EBA218A27D600811E89 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		2D6EA247218DF9B4000FE02E /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		2D6EA24B218E0D01000FE02E /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		331DC177219604470002CBB3 /* ViewHackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHackController.swift; sourceTree = "<group>"; };
 		332D8EB3218A27D600811E89 /* Money Exchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Money Exchange.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		332D8EB6218A27D600811E89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		332D8EB8218A27D600811E89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				332D8EC2218A27D700811E89 /* Info.plist */,
 				2D6EA247218DF9B4000FE02E /* Coin.swift */,
 				2D6EA24B218E0D01000FE02E /* RoundButton.swift */,
+				331DC177219604470002CBB3 /* ViewHackController.swift */,
 			);
 			path = "Money Exchange";
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				2D6EA24C218E0D01000FE02E /* RoundButton.swift in Sources */,
 				2D6EA248218DF9B4000FE02E /* Coin.swift in Sources */,
+				331DC178219604470002CBB3 /* ViewHackController.swift in Sources */,
 				332D8EB9218A27D600811E89 /* ViewController.swift in Sources */,
 				332D8EB7218A27D600811E89 /* AppDelegate.swift in Sources */,
 			);

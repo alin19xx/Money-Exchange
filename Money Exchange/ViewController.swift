@@ -9,10 +9,8 @@
 import UIKit
 
 
-
+var arrayCoins:[Coin] = []
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    
- 
     //Variable del pickerView
     @IBOutlet weak var pickerView: UIPickerView!
     //Input donde se pone la cantidad
@@ -28,16 +26,17 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var btnNext: RoundButton!
     //Boton previous fotos
     @IBOutlet weak var btnPrev: RoundButton!
-    var contador = 1
+    var counter = 1
     @IBOutlet weak var imageFlag: UIImageView!
     @IBOutlet weak var imagBack: UIImageView!
     @IBOutlet weak var labelCoinValue: UILabel!
-    var arrayCoins:[Coin] = []
+    
     var pos1 = ""
     var pos2 = ""
     var value1 = 0
     var value2 = 0
     
+    @IBOutlet weak var btnHack: UIButton!
     //Metodo para establecer el numero de columnas
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
@@ -63,27 +62,23 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     @IBAction func convert(_ sender: Any) {
+        //Comprobacion de si funciona el pickerView
         print(pos1)
         print(pos2)
         print(value1)
         print(value2)
-        
+        //Le decimos que si no puede castarlo que el ponga un 0
         let valor:Double = Double(inputAmount.text ?? "0") ?? 0
-
+        //Cogemos el valor de la moneda del componente 1 y del componente 2
         let a = arrayCoins[value1].getValueCoin()
         let b = arrayCoins[value2].getValueCoin()
         let conversion:Double = (valor * b) / a
-
         textInfo.text = String(conversion)
+        if(valor == 999){
+            btnHack.isHidden = false
+        }
     }
-    
-    /* CODIGO PARA GUARDAR LA INFO DEL PICKERVIEW EN LABEL
-    let dictCoins = self.dictCoins[0][textInfo.selectedRowInComponent(0)]
-    
-    
-    */
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -102,52 +97,56 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         arrayCoins.append(xrp)
         let ltc = Coin(keyCoin: "LTC", valueCoin: 0.022)
         arrayCoins.append(ltc)
+        pickerView.selectRow(0, inComponent: 0, animated: true)
+        pickerView.selectRow(0, inComponent: 1, animated: true)
+        counter = 1
+        btnHack.isHidden = true
     }
     
     @IBAction func next(_ sender: Any) {
-        
-        contador += 1
-        if(contador == 7){
-           contador = 0
+       
+        counter += 1
+         if(counter == 7){
+           counter = 1
         }
-        desplazar()
+        slide()
     }
     
     @IBAction func previous(_ sender: Any) {
-        contador -= 1
-        if(contador == 1){
-            contador = 6
+        counter -= 1
+        if(counter == 0){
+            counter = 6
         }
-        desplazar()
+        slide()
     }
     
     
     
-    func desplazar() {
+    func slide() {
         
-        switch contador {
+        switch counter {
         case 1:
-           labelCoinValue.text = "\(arrayCoins[0].getValueCoin())"
+            labelCoinValue.text = "Valor \(arrayCoins[0].getKeyCoin()) : \(arrayCoins[0].getValueCoin())"
             imageFlag.image = UIImage(named: "euro.jpeg")
             imagBack.image = UIImage(named: "eurBack.jpg")
         case 2:
-             labelCoinValue.text = "\(arrayCoins[1].getValueCoin())"
+             labelCoinValue.text = "Valor \(arrayCoins[1].getKeyCoin()) : \(arrayCoins[1].getValueCoin())"
             imageFlag.image = UIImage(named: "dolar.jpg")
             imagBack.image = UIImage(named: "usdBack")
         case 3:
-             labelCoinValue.text = "\(arrayCoins[2].getValueCoin())"
+             labelCoinValue.text = "Valor \(arrayCoins[2].getKeyCoin()) : \(arrayCoins[2].getValueCoin())"
             imageFlag.image = UIImage(named: "bitcoin.jpg")
             imagBack.image = UIImage(named: "btcBack")
         case 4:
-            labelCoinValue.text = "\(arrayCoins[3].getValueCoin())"
+            labelCoinValue.text = "Valor \(arrayCoins[3].getKeyCoin()) : \(arrayCoins[3].getValueCoin())"
             imageFlag.image = UIImage(named: "ethereum.png")
             imagBack.image = UIImage(named: "ethBack.jpg")
         case 5:
-              labelCoinValue.text = "\(arrayCoins[4].getValueCoin())"
+              labelCoinValue.text = "Valor \(arrayCoins[4].getKeyCoin()) : \(arrayCoins[4].getValueCoin())"
             imageFlag.image = UIImage(named: "ripple.jpg")
             imagBack.image = UIImage(named: "xrpBack.jpg")
         case 6:
-              labelCoinValue.text = "\(arrayCoins[5].getValueCoin())"
+              labelCoinValue.text = "Valor \(arrayCoins[5].getKeyCoin()) : \(arrayCoins[5].getValueCoin())"
             imageFlag.image = UIImage(named: "litecoin.jpg")
             imagBack.image = UIImage(named: "ltcBack.jpg")
         default:
