@@ -17,6 +17,25 @@
 		332D8EC1218A27D700811E89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332D8EBF218A27D700811E89 /* LaunchScreen.storyboard */; };
 		332D8ECC218A27D700811E89 /* Money_ExchangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332D8ECB218A27D700811E89 /* Money_ExchangeTests.swift */; };
 		332D8ED7218A27D700811E89 /* Money_ExchangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332D8ED6218A27D700811E89 /* Money_ExchangeUITests.swift */; };
+		336E4AC9219CACA900848791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332D8EB6218A27D600811E89 /* AppDelegate.swift */; };
+		336E4ACA219CACA900848791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332D8EB6218A27D600811E89 /* AppDelegate.swift */; };
+		336E4ACB219CACAB00848791 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332D8EB8218A27D600811E89 /* ViewController.swift */; };
+		336E4ACC219CACAB00848791 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332D8EB8218A27D600811E89 /* ViewController.swift */; };
+		336E4ACE219CACAF00848791 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332D8EBA218A27D600811E89 /* Main.storyboard */; };
+		336E4ACF219CACB000848791 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332D8EBA218A27D600811E89 /* Main.storyboard */; };
+		336E4AD0219CACB300848791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 332D8EBD218A27D700811E89 /* Assets.xcassets */; };
+		336E4AD1219CACB300848791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 332D8EBD218A27D700811E89 /* Assets.xcassets */; };
+		336E4AD2219CACB700848791 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332D8EBF218A27D700811E89 /* LaunchScreen.storyboard */; };
+		336E4AD3219CACB700848791 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332D8EBF218A27D700811E89 /* LaunchScreen.storyboard */; };
+		336E4AD4219CACBA00848791 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 332D8EC2218A27D700811E89 /* Info.plist */; };
+		336E4AD5219CACBA00848791 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 332D8EC2218A27D700811E89 /* Info.plist */; };
+		336E4AD6219CACBA00848791 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 332D8EC2218A27D700811E89 /* Info.plist */; };
+		336E4AD7219CACBD00848791 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6EA247218DF9B4000FE02E /* Coin.swift */; };
+		336E4AD8219CACBD00848791 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6EA247218DF9B4000FE02E /* Coin.swift */; };
+		336E4AD9219CACBF00848791 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6EA24B218E0D01000FE02E /* RoundButton.swift */; };
+		336E4ADA219CACC000848791 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6EA24B218E0D01000FE02E /* RoundButton.swift */; };
+		336E4ADB219CACC200848791 /* ViewHackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331DC177219604470002CBB3 /* ViewHackController.swift */; };
+		336E4ADC219CACC300848791 /* ViewHackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331DC177219604470002CBB3 /* ViewHackController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -238,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				336E4AD4219CACBA00848791 /* Info.plist in Resources */,
 				332D8EC1218A27D700811E89 /* LaunchScreen.storyboard in Resources */,
 				332D8EBE218A27D700811E89 /* Assets.xcassets in Resources */,
 				332D8EBC218A27D600811E89 /* Main.storyboard in Resources */,
@@ -248,6 +268,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				336E4AD5219CACBA00848791 /* Info.plist in Resources */,
+				336E4AD2219CACB700848791 /* LaunchScreen.storyboard in Resources */,
+				336E4AD0219CACB300848791 /* Assets.xcassets in Resources */,
+				336E4ACE219CACAF00848791 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +279,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				336E4AD6219CACBA00848791 /* Info.plist in Resources */,
+				336E4AD3219CACB700848791 /* LaunchScreen.storyboard in Resources */,
+				336E4AD1219CACB300848791 /* Assets.xcassets in Resources */,
+				336E4ACF219CACB000848791 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +305,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				336E4ACB219CACAB00848791 /* ViewController.swift in Sources */,
+				336E4AD9219CACBF00848791 /* RoundButton.swift in Sources */,
+				336E4AC9219CACA900848791 /* AppDelegate.swift in Sources */,
+				336E4AD7219CACBD00848791 /* Coin.swift in Sources */,
 				332D8ECC218A27D700811E89 /* Money_ExchangeTests.swift in Sources */,
+				336E4ADB219CACC200848791 /* ViewHackController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +318,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				336E4ACC219CACAB00848791 /* ViewController.swift in Sources */,
+				336E4ADA219CACC000848791 /* RoundButton.swift in Sources */,
+				336E4ACA219CACA900848791 /* AppDelegate.swift in Sources */,
+				336E4AD8219CACBD00848791 /* Coin.swift in Sources */,
 				332D8ED7218A27D700811E89 /* Money_ExchangeUITests.swift in Sources */,
+				336E4ADC219CACC300848791 /* ViewHackController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
