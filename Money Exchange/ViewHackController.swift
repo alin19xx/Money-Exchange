@@ -13,6 +13,14 @@ class ViewHackController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     @IBOutlet weak var pickerHackView: UIPickerView!
     
+    @IBOutlet weak var btnConvertHack: RoundButton!
+    @IBOutlet weak var inputAmountHack: UITextField!
+    @IBOutlet weak var btnBack: RoundButton!
+    var name = ""
+    var value = 0
+    @IBOutlet weak var infoHack: UILabel!
+    
+    @IBOutlet weak var infoHack2: UILabel!
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -21,8 +29,15 @@ class ViewHackController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         return arrayCoins.count
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>,
+                      with event: UIEvent?){
+        self.view.endEditing(true)
+    }
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return arrayCoins[row].getKeyCoin()
+        value = row
+        name = arrayCoins[row].getKeyCoin()
+        return name
     }
     
     
@@ -30,7 +45,24 @@ class ViewHackController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         super.viewDidLoad()
         pickerHackView.dataSource = self
         pickerHackView.delegate = self
+        infoHack.isHidden = true
+        infoHack2.isHidden = true
         // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func convertHack(_ sender: Any) {
+        for i in arrayCoins {
+            if(name == i.getKeyCoin()){
+                i.setValueCoin(valueCoin: Double(inputAmountHack.text ?? "0") ?? 0 )
+                infoHack.text = "Chaval! Estas hecho todo un hacker:"
+                infoHack2.text = "Moneda: \(i.getKeyCoin()) Valor Nuevo: \(i.getValueCoin())"
+                infoHack.isHidden = false
+                infoHack2.isHidden = false
+            }
+        }
+        
+        
     }
     
 

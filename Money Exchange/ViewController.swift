@@ -73,7 +73,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         let a = arrayCoins[value1].getValueCoin()
         let b = arrayCoins[value2].getValueCoin()
         let conversion:Double = (valor * b) / a
-        textInfo.text = String(conversion)
+        textInfo.text = String(conversion) + "€"
         if(valor == 999){
             btnHack.isHidden = false
         }
@@ -101,6 +101,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         pickerView.selectRow(0, inComponent: 1, animated: true)
         counter = 1
         btnHack.isHidden = true
+        labelCoinValue.text = "Valor \(arrayCoins[0].getKeyCoin()) : \(arrayCoins[0].getValueCoin())"
     }
     
     @IBAction func next(_ sender: Any) {
